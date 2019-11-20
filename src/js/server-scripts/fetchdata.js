@@ -36,18 +36,40 @@ const geoJson = {
     type: 'FeatureCollection',
     features: []
 }
-const uniqueCordsContainer = []
 
 fetchdata(settings.apiUrl, settings.query)
 .then(data => processData(data))
+    .then(() => {
+        const everyCountry = [...new Set(geoJson.features.map(feature =>
+            feature.properties.country
+        ))]
+        const featureArray = []
+        everyCountry.forEach(land => {
+            let newObj = new Object()
+            geoJson.features.filter(geoJson => {
+                if(geoJson.properties.country === land) {
+                    if(newObj.country) {
+                        newObj.amount += 1
+                    } else {
+                        newObj.country = geoJson.properties.country
+                        newObj.amount = 1
+                        newObj.coordinates = geoJson.geometry.coordinates
+                    }
+                }
+            })
+            featureArray.push(newObj = {
+                featureObj: newObj,
+            })
+        })
+        writeData(featureArray)
+    })
 
 function processData(data) {
     data.results.bindings
         .map(convertToFeatureObject)
         .map(pushFeatures)
-    writeData(geoJson)
+    return data
 }
-
 function convertToFeatureObject(item) {
     const feature = {
         type: 'Feature',

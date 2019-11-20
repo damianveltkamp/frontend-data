@@ -1,4 +1,3 @@
-// MAPBOX initialiseren
 const d3 = require('d3')
 const mapboxgl = require('mapbox-gl')
 import {getFeatures} from "./fetchfeatures";
@@ -12,10 +11,10 @@ const mapBox = new mapboxgl.Map({
 })
 buildMap(mapBox)
 function buildMap(mapBox) {
-    foo(mapBox)
+    init(mapBox)
 }
 
-async function foo(mapBox) {
+async function init(mapBox) {
     const d3settings = {
         projection: getD3(mapBox),
         path: d3.geoPath(),
@@ -43,7 +42,6 @@ function getD3(mapBox) {
 function renderD3(projection,path,svg,map,data) {
     function render() {
         data.forEach(country => {
-            console.log(country)
             plotBubbles(svg,country.featureObj,projection)
         })
         function plotBubbles(svg, data, projection) {
@@ -53,6 +51,11 @@ function renderD3(projection,path,svg,map,data) {
             var radius = d3.scaleLinear()
                 .domain([0, 10000])
                 .range([5, 50]);
+
+            // create a tooltip
+            var div = d3.select("body").append("div")
+                .attr("class", "tooltip")
+                .style("opacity", 0);
 
             svg
                 .selectAll('circles')
@@ -64,13 +67,29 @@ function renderD3(projection,path,svg,map,data) {
                 .attr('cy', function (d) { return projection(d.coordinates)[1]; })
                 .attr("r", function(d) { return radius(d.amount); })
                 .style('fill', '#002951')
+                .on('click', function(d){
+                    // TODO Flag toevoegen aan het object. Nu wordt hij geopend en geclosed wanneer je op de svg klikt, hij moet geopend worden als je klikt op svg en closed wanneer je klikt op div
+                    if(d.flag == false) {
+                        div.transition()
+                            .duration(200)
+                            .style("opacity", .9);
+                        div	.html(d.country + '</br>' + d.amount)
+                            .style("left", (d3.event.pageX) + "px")
+                            .style("top", (d3.event.pageY - 28) + "px")
+                        d.flag = true
+                    } else {
+                        div.style('opacity', 0)
+                        d.flag = false
+                    }
+                })
         }
     }
     function remove() {
         svg.selectAll('circle').remove().exit()
+        d3.selectAll('.tooltip').remove().exit()
     }
+
     map.on('viewreset', function() {
-        // Remove old circle's and rerender
         remove()
         render()
     })
