@@ -3,6 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/frontend-data" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/functional-programming" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/webpack-boilerplate" vcs="Git" />
   </component>
 </project>

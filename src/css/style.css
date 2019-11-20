@@ -1,5 +1,11 @@
-.image-test {
-    width: 100px;
-    height: 100px;
-    background: url('../images/cat-pet-animal-domestic-104827.jpeg');
+body { margin:0;position:fixed;top:0;right:0;bottom:0;left:0; }
+#map {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+}
+svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }

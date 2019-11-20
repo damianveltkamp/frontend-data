@@ -44,5 +44,8 @@ module.exports = {
         contentBase: 'dist',
         port: 9000,
         watchContentBase: true
+    },
+    node: {
+        fs: "empty"
     }
 }
