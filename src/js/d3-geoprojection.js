@@ -94,7 +94,8 @@ function renderD3(projection,path,svg,map,data) {
                 d3.select(this).classed('clicked',true)
                 const div = d3.select('#view-container').append('div')
                 div
-                    .html(item.country)
+                    //TODO HTML STRUCTURE AANMAKEN VOOR TOOLTIP
+                    .html('<h2>'+item.country+'</h2>')
                     .attr('class', 'country-tooltip')
                 console.log('Hello')
                 item.flag = true
@@ -105,11 +106,13 @@ function renderD3(projection,path,svg,map,data) {
             }
         }
     }
+
     function remove() {
         svg.selectAll('circle').remove().exit()
         d3.selectAll('.tooltip').remove().exit()
     }
 
+    // Rerender map on move and viewreset
     map.on('viewreset', function() {
         remove()
         render()

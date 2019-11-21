@@ -1,10 +1,6 @@
 # Functional-programming 
 Repository for the functional programming course
 
-Demo: [Demo link](https://gallant-noyce-4ba263.netlify.com/)
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/72550cb8-b417-4853-96df-ebbbc71e130b/deploy-status)](https://app.netlify.com/sites/gallant-noyce-4ba263/deploys)
-
 ## Table of contents
 * [Concept](#concept)
 * [Installing](#installing)
