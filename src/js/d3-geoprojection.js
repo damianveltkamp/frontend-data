@@ -41,21 +41,20 @@ function getD3(mapBox) {
 
 function renderD3(projection,path,svg,map,data) {
     function render() {
+        // Wanneer je circle klikt, zet object flag op true
+        // Wanneer je op een andere circle klikt, zet vorige object met een flag op false, en huidige op true
+
+        // Check if this is initial render or a rerender
+
         data.forEach(country => {
             plotBubbles(svg,country.featureObj,projection)
         })
         function plotBubbles(svg, data, projection) {
             projection = getD3(map);
             path.projection(projection)
-            // TODO domain dynamisch aan de hand van de data populaten, niet hardcoded 10000 entries
             var radius = d3.scaleLinear()
                 .domain([0, 10000])
                 .range([10, 50]);
-
-            // create a tooltip
-            var div = d3.select("body").append("div")
-                .attr("class", "tooltip")
-                .style("opacity", 0);
 
             svg
                 .selectAll('circles')
@@ -63,26 +62,47 @@ function renderD3(projection,path,svg,map,data) {
                 .enter()
                 .append('circle')
                 .attr('class', 'country-circle')
-                .attr('cx', (d) => { return projection(d.coordinates)[0] })
-                .attr('cy', (d) => { return projection(d.coordinates)[1]; })
-                .attr("r", (d) => { return radius(d.amount); })
-                .on('mouseover', mouseoverHandler)
-                .on('mouseleave', mouseleaveHandler)
-                .on('click', (d) =>{
-                    // TODO Flag toevoegen aan het object. Nu wordt hij geopend en geclosed wanneer je op de svg klikt, hij moet geopend worden als je klikt op svg en closed wanneer je klikt op div
-                    if(d.flag == false) {
-                        div.transition()
-                            .duration(200)
-                            .style("opacity", .9);
-                        div	.html(d.country + '</br>' + d.amount)
-                            .style("left", (d3.event.pageX) + "px")
-                            .style("top", (d3.event.pageY - 28) + "px")
-                        d.flag = true
+                .attr('data-country', (d) => {
+                    return d.country
+                })
+                .classed('clicked', (d) => {
+                    if(d.flag == true) {
+                        return true
                     } else {
-                        div.style('opacity', 0)
-                        d.flag = false
+                        return false
                     }
                 })
+                .attr('cx', (d) => { return projection(d.coordinates)[0] })
+                .attr('cy', (d) => { return projection(d.coordinates)[1]; })
+                .attr('r', (d) => { return radius(d.amount); })
+                .on('mouseover', mouseoverHandler)
+                .on('mouseleave', mouseleaveHandler)
+                .on('click', mouseclickHandler)
+        }
+
+        function mouseclickHandler(item) {
+            removeTooltip()
+            data.forEach((d) => {
+                if(d.featureObj.flag == true && this.dataset.country != d.featureObj.country) {
+                    d.featureObj.flag = false
+                } else if(d.featureObj.flag == true && this.dataset.country == d.country) {
+                    console.log('komt in de elseif')
+                    d.featureObj.flag = true
+                }
+            })
+            if(item.flag == false) {
+                d3.select(this).classed('clicked',true)
+                const div = d3.select('#view-container').append('div')
+                div
+                    .html(item.country)
+                    .attr('class', 'country-tooltip')
+                console.log('Hello')
+                item.flag = true
+            } else {
+                d3.select(this).classed('clicked', false)
+                d3.select('.country-tooltip').remove().exit()
+                item.flag = false
+            }
         }
     }
     function remove() {
@@ -99,14 +119,18 @@ function renderD3(projection,path,svg,map,data) {
         render()
     })
 
-    // render our initial visualization
+    // render initial visualization
     render()
 }
 
 // Helper functions
 function mouseoverHandler() {
-    d3.select(this).attr('class', 'country-circle hovered')
+    d3.select(this).classed('hovered',true)
 }
 function mouseleaveHandler() {
-    d3.select(this).attr('class', 'country-circle')
+    d3.select(this).classed('hovered',false)
+}
+function removeTooltip() {
+    d3.selectAll('.country-tooltip').remove().exit()
+    d3.selectAll('.country-circle.clicked').classed('clicked', false)
 }
