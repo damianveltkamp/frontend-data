@@ -50,7 +50,7 @@ function renderD3(projection,path,svg,map,data) {
             // TODO domain dynamisch aan de hand van de data populaten, niet hardcoded 10000 entries
             var radius = d3.scaleLinear()
                 .domain([0, 10000])
-                .range([5, 50]);
+                .range([10, 50]);
 
             // create a tooltip
             var div = d3.select("body").append("div")
@@ -62,12 +62,13 @@ function renderD3(projection,path,svg,map,data) {
                 .data([data])
                 .enter()
                 .append('circle')
-                .attr('class', data.country)
-                .attr('cx', function (d) { return projection(d.coordinates)[0] })
-                .attr('cy', function (d) { return projection(d.coordinates)[1]; })
-                .attr("r", function(d) { return radius(d.amount); })
-                .style('fill', '#002951')
-                .on('click', function(d){
+                .attr('class', 'country-circle')
+                .attr('cx', (d) => { return projection(d.coordinates)[0] })
+                .attr('cy', (d) => { return projection(d.coordinates)[1]; })
+                .attr("r", (d) => { return radius(d.amount); })
+                .on('mouseover', mouseoverHandler)
+                .on('mouseleave', mouseleaveHandler)
+                .on('click', (d) =>{
                     // TODO Flag toevoegen aan het object. Nu wordt hij geopend en geclosed wanneer je op de svg klikt, hij moet geopend worden als je klikt op svg en closed wanneer je klikt op div
                     if(d.flag == false) {
                         div.transition()
@@ -100,4 +101,12 @@ function renderD3(projection,path,svg,map,data) {
 
     // render our initial visualization
     render()
+}
+
+// Helper functions
+function mouseoverHandler() {
+    d3.select(this).attr('class', 'country-circle hovered')
+}
+function mouseleaveHandler() {
+    d3.select(this).attr('class', 'country-circle')
 }

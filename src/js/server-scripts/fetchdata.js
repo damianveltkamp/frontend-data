@@ -57,6 +57,7 @@ fetchdata(settings.apiUrl, settings.query)
                     }
                 }
             })
+            newObj.flag = false
             featureArray.push(newObj = {
                 featureObj: newObj,
             })

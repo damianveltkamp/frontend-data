@@ -6,7 +6,8 @@
             "coordinates": [
                 -56,
                 4
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -16,7 +17,8 @@
             "coordinates": [
                 -40,
                 72
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -26,7 +28,8 @@
             "coordinates": [
                 -55,
                 -10
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -36,7 +39,8 @@
             "coordinates": [
                 30,
                 27
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -46,7 +50,8 @@
             "coordinates": [
                 -71,
                 -30
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -56,7 +61,8 @@
             "coordinates": [
                 79,
                 22
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -66,7 +72,8 @@
             "coordinates": [
                 35,
                 -6
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -76,7 +83,8 @@
             "coordinates": [
                 120,
                 -5
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -86,7 +94,8 @@
             "coordinates": [
                 23.5,
                 -2.5
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -96,7 +105,8 @@
             "coordinates": [
                 158.162,
                 6.924
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -106,7 +116,8 @@
             "coordinates": [
                 147,
                 -6
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -116,7 +127,8 @@
             "coordinates": [
                 8,
                 10
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -126,7 +138,8 @@
             "coordinates": [
                 18.5,
                 -12.5
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -136,7 +149,8 @@
             "coordinates": [
                 -75.25,
                 -10
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -146,7 +160,8 @@
             "coordinates": [
                 -102,
                 23
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -156,7 +171,8 @@
             "coordinates": [
                 172.984,
                 1.421
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -166,7 +182,8 @@
             "coordinates": [
                 28.5,
                 -14.33333
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -176,7 +193,8 @@
             "coordinates": [
                 -73.25,
                 4
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -186,7 +204,8 @@
             "coordinates": [
                 -64,
                 -34
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -196,7 +215,8 @@
             "coordinates": [
                 105,
                 18
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -206,7 +226,8 @@
             "coordinates": [
                 122,
                 13
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -216,7 +237,8 @@
             "coordinates": [
                 112.5,
                 2.5
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -226,7 +248,8 @@
             "coordinates": [
                 105,
                 35
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -236,7 +259,8 @@
             "coordinates": [
                 15.5,
                 -1
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -246,7 +270,8 @@
             "coordinates": [
                 -2,
                 18
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -256,7 +281,8 @@
             "coordinates": [
                 35,
                 39
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -266,7 +292,8 @@
             "coordinates": [
                 135,
                 -25
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -276,7 +303,8 @@
             "coordinates": [
                 10.5,
                 1.7
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -286,7 +314,8 @@
             "coordinates": [
                 35,
                 -18.25
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -296,7 +325,8 @@
             "coordinates": [
                 167,
                 -16
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -306,7 +336,8 @@
             "coordinates": [
                 -15,
                 12
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -316,7 +347,8 @@
             "coordinates": [
                 21,
                 7
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -326,7 +358,8 @@
             "coordinates": [
                 45,
                 25
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -336,7 +369,8 @@
             "coordinates": [
                 -140,
                 -15
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -346,7 +380,8 @@
             "coordinates": [
                 125.75,
                 -8.83333
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -356,7 +391,8 @@
             "coordinates": [
                 100,
                 60
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -366,7 +402,8 @@
             "coordinates": [
                 -78.25,
                 -1.25
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -376,7 +413,8 @@
             "coordinates": [
                 -59,
                 5
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -386,7 +424,8 @@
             "coordinates": [
                 -58,
                 -23.33333
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -396,7 +435,8 @@
             "coordinates": [
                 107.83333,
                 16.16667
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -406,7 +446,8 @@
             "coordinates": [
                 -14.25,
                 14.5
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -416,7 +457,8 @@
             "coordinates": [
                 57,
                 21
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -426,7 +468,8 @@
             "coordinates": [
                 174,
                 -42
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -436,7 +479,8 @@
             "coordinates": [
                 -1.2,
                 8.1
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -446,7 +490,8 @@
             "coordinates": [
                 53,
                 32
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -456,7 +501,8 @@
             "coordinates": [
                 2.25,
                 9.5
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -466,7 +512,8 @@
             "coordinates": [
                 12.5,
                 6
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -476,7 +523,8 @@
             "coordinates": [
                 3,
                 28
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -486,7 +534,8 @@
             "coordinates": [
                 24,
                 -29
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -496,7 +545,8 @@
             "coordinates": [
                 17,
                 -22
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -506,7 +556,8 @@
             "coordinates": [
                 -65,
                 -17
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -516,7 +567,8 @@
             "coordinates": [
                 24,
                 -22
-            ]
+            ],
+            "flag": false
         }
     },
     {
@@ -526,7 +578,8 @@
             "coordinates": [
                 -84,
                 10
-            ]
+            ],
+            "flag": false
         }
     }
 ]
