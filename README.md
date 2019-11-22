@@ -53,5 +53,5 @@ Credits go out to [Laurens](https://github.com/Razpudding), [Danny](https://gith
 
 ## Honourable mentions
 * [Wessel smit](https://github.com/WesselSmit)
-* Sjors Eveleens (Cant find your github *SADFACE*)
+* [Sjors Eveleens](htt[s://github.com/choerd])
 * Thijs Spijker (Cant find your github *SADFACE*)
