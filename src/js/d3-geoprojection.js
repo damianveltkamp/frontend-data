@@ -62,11 +62,7 @@ function renderD3(projection,path,svg,map,data) {
                     return d.country
                 })
                 .classed('clicked', (d) => {
-                    if(d.flag == true) {
-                        return true
-                    } else {
-                        return false
-                    }
+                    return d.flag == true ? true : false
                 })
                 .attr('cx', (d) => { return projection(d.coordinates)[0] })
                 .attr('cy', (d) => { return projection(d.coordinates)[1]; })
@@ -79,12 +75,8 @@ function renderD3(projection,path,svg,map,data) {
         function mouseclickHandler(item) {
             removeTooltip()
             data.forEach((d) => {
-                if(d.featureObj.flag == true && this.dataset.country != d.featureObj.country) {
-                    d.featureObj.flag = false
-                } else if(d.featureObj.flag == true && this.dataset.country == d.country) {
-                    console.log('komt in de elseif')
-                    d.featureObj.flag = true
-                }
+                (d.featureObj.flag == true && this.dataset.country != d.featureObj.country) ? d.featureObj.flag = false :
+                    (d.featureObj.flag == true && this.dataset.country == d.country) ? d.featureObj.flag = true : ''
             })
             if(item.flag == false) {
                 d3.select(this).classed('clicked',true)
@@ -110,14 +102,11 @@ function renderD3(projection,path,svg,map,data) {
             path.projection(projection)
             const selection = d3.selectAll('.country-circle')
             selection._groups[0].forEach(circle => {
-                if(data.country == circle.dataset.country) {
+                (data.country == circle.dataset.country) &&
                     d3.select(circle)
                         .data([data])
                         .attr('cx', (d) => { return projection(d.coordinates)[0] })
                         .attr('cy', (d) => { return projection(d.coordinates)[1] })
-                } else {
-                    console.log('not the same')
-                }
             })
         }
     }
