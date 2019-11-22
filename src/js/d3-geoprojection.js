@@ -41,11 +41,7 @@ function getD3(mapBox) {
 
 function renderD3(projection,path,svg,map,data) {
     function render() {
-        // Wanneer je circle klikt, zet object flag op true
-        // Wanneer je op een andere circle klikt, zet vorige object met een flag op false, en huidige op true
-
         // Check if this is initial render or a rerender
-
         data.forEach(country => {
             plotBubbles(svg,country.featureObj,projection)
         })
@@ -97,7 +93,6 @@ function renderD3(projection,path,svg,map,data) {
                     //TODO HTML STRUCTURE AANMAKEN VOOR TOOLTIP
                     .html('<h2>'+item.country+'</h2>')
                     .attr('class', 'country-tooltip')
-                console.log('Hello')
                 item.flag = true
             } else {
                 d3.select(this).classed('clicked', false)
@@ -106,20 +101,33 @@ function renderD3(projection,path,svg,map,data) {
             }
         }
     }
-
-    function remove() {
-        svg.selectAll('circle').remove().exit()
-        d3.selectAll('.tooltip').remove().exit()
+    function update() {
+        data.forEach(country => {
+            updateBubles(svg,country.featureObj,projection)
+        })
+        function updateBubles(svg, data, projection) {
+            projection = getD3(map);
+            path.projection(projection)
+            const selection = d3.selectAll('.country-circle')
+            selection._groups[0].forEach(circle => {
+                if(data.country == circle.dataset.country) {
+                    d3.select(circle)
+                        .data([data])
+                        .attr('cx', (d) => { return projection(d.coordinates)[0] })
+                        .attr('cy', (d) => { return projection(d.coordinates)[1] })
+                } else {
+                    console.log('not the same')
+                }
+            })
+        }
     }
 
     // Rerender map on move and viewreset
     map.on('viewreset', function() {
-        remove()
-        render()
+        update()
     })
     map.on('move', function() {
-        remove()
-        render()
+        update()
     })
 
     // render initial visualization

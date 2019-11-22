@@ -20,7 +20,7 @@ svg {
 
 /*Country circles*/
 .country-circle {
-    transition: 150ms ease-in-out;
+    /*transition: 150ms ease-in-out;*/
     fill: #002951;
     stroke: red;
 }
