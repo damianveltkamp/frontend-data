@@ -13,9 +13,10 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX gn: <http://www.geonames.org/ontology#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-SELECT ?cho ?landName ?lat ?long WHERE {
+SELECT ?cho ?wapenType ?landName ?lat ?long WHERE {
    <https://hdl.handle.net/20.500.11840/termmaster12435> skos:narrower* ?type .
    ?cho edm:object ?type .
+   ?cho dc:type ?wapenType .
    ?cho dct:spatial ?place .
    ?place skos:exactMatch/gn:parentCountry ?land .
    ?land gn:name ?landName . 
@@ -38,28 +39,38 @@ const geoJson = {
 }
 
 fetchdata(settings.apiUrl, settings.query)
-.then(data => processData(data))
+    .then(data => processData(data))
     .then(() => {
         const everyCountry = [...new Set(geoJson.features.map(feature =>
             feature.properties.country
         ))]
         const featureArray = []
-        everyCountry.forEach(land => {
-            let newObj = new Object()
-            geoJson.features.filter(geoJson => {
-                if(geoJson.properties.country === land) {
-                    if(newObj.country) {
-                        newObj.amount += 1
+        everyCountry.map(country => {
+            // Create new new objects for feature and weapons
+            let weaponObj = new Object()
+            let featureObj = new Object()
+
+            geoJson.features.map(data => {
+                if(data.properties.country === country) {
+                    // TODO shorthand schrijven
+                    if (weaponObj[data.properties.weapontype] != null) {
+                        weaponObj[data.properties.weapontype] += 1
                     } else {
-                        newObj.country = geoJson.properties.country
-                        newObj.amount = 1
-                        newObj.coordinates = geoJson.geometry.coordinates
+                        weaponObj[data.properties.weapontype] = 1
+                    }
+
+                    if(featureObj.country) {
+                        featureObj.amount += 1
+                    } else {
+                        featureObj.country = data.properties.country
+                        featureObj.amount = 1
+                        featureObj.coordinates = data.geometry.coordinates
                     }
                 }
             })
-            newObj.flag = false
-            featureArray.push(newObj = {
-                featureObj: newObj,
+            featureArray.push(bundledObj = {
+                featureObj: featureObj,
+                weaponObj: weaponObj
             })
         })
         writeData(featureArray)
@@ -76,7 +87,8 @@ function convertToFeatureObject(item) {
         type: 'Feature',
         properties: {
             // Add extra properties to the feature here i.e. Popups
-            country: item.landName.value
+            country: item.landName.value,
+            weapontype: filterWeaponTypes(item)
         },
         geometry: {
             type: 'Point',
@@ -87,6 +99,63 @@ function convertToFeatureObject(item) {
         }
     }
     return feature
+}
+
+function filterWeaponTypes(item) {
+    let string = item.wapenType.value.toLowerCase().trim()
+
+    string.includes('bundel')
+    || string.includes('model')
+    || string.includes('werktuig')
+    || string.includes('slinger')
+    || string.includes('kostuum')
+    || string.includes('vlechtwerk')
+    || string.includes('landbouwgereedschap')
+    || string.includes('kostuumset bruidegom')
+    || string.includes('speelgoed')
+    || string.includes('koker') ? string = 'unknown' : ''
+
+    string.includes('pijl')
+    || string.includes('katapult')
+    || string.includes('boog') ? string = 'spangeschut' : ''
+
+    string.includes('knots')
+    ||    string.includes('schild')
+    ||    string.includes('steen')
+    ||    string.includes('degen')
+    ||    string.includes('stok')
+    ||    string.includes('staf')
+    ||    string.includes('dolk')
+    ||    string.includes('kris')
+    ||    string.includes('drietand')
+    ||    string.includes('bijl')
+    ||    string.includes('knuppel')
+    ||    string.includes('schede')
+    ||    string.includes('mes')
+    ||    string.includes('zijtand')
+    ||    string.includes('zwaard')
+    ||    string.includes('ploertendoder') ? string = 'handwapens' : ''
+
+    string.includes('speer')
+    ||    string.includes('harpoen')
+    ||    string.includes('werp')
+    ||    string.includes('lans')
+    ||    string.includes('assegaai')
+    ||    string.includes('lasso')
+    ||    string.includes('bola') ? string = 'werpwapen' : ''
+
+    string.includes('kanon')
+    ||    string.includes('draaibas')
+    ||    string.includes('wapen')? string = 'kannonen' :  ''
+
+    string.includes('geweer')
+    ||    string.includes('donderbus')
+    ||    string.includes('pistool')
+    ||    string.includes('revolver')? string = 'vuurwapens' :  ''
+
+    string.includes('tempelattribuut') ? string = 'ceremonieel' : ''
+
+    return string
 }
 
 function pushFeatures(item) {
