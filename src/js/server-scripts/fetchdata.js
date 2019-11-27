@@ -65,6 +65,7 @@ fetchdata(settings.apiUrl, settings.query)
                         featureObj.country = data.properties.country
                         featureObj.amount = 1
                         featureObj.coordinates = data.geometry.coordinates
+                        featureObj.flag = false
                     }
                 }
             })
@@ -113,6 +114,7 @@ function filterWeaponTypes(item) {
     || string.includes('landbouwgereedschap')
     || string.includes('kostuumset bruidegom')
     || string.includes('speelgoed')
+    || string.includes('tempelattribuut')
     || string.includes('koker') ? string = 'unknown' : ''
 
     string.includes('pijl')
@@ -144,16 +146,13 @@ function filterWeaponTypes(item) {
     ||    string.includes('lasso')
     ||    string.includes('bola') ? string = 'werpwapen' : ''
 
-    string.includes('kanon')
-    ||    string.includes('draaibas')
-    ||    string.includes('wapen')? string = 'kannonen' :  ''
-
     string.includes('geweer')
     ||    string.includes('donderbus')
     ||    string.includes('pistool')
+    ||    string.includes('draaibas')
+    ||    string.includes('kanon')
+    ||    string.includes('wapen')
     ||    string.includes('revolver')? string = 'vuurwapens' :  ''
-
-    string.includes('tempelattribuut') ? string = 'ceremonieel' : ''
 
     return string
 }

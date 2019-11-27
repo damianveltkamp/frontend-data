@@ -43,9 +43,17 @@ svg {
     position: absolute;
     top: 0;
     left: 0;
+    height: 100%;
     padding: 20px;
     background: #002951;
 }
+.country-tooltip svg {
+    width: 100%;
+}
 .country-tooltip h2 {
     color: #fff;
+}
+
+.pie-svg {
+    position: relative;
 }

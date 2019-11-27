@@ -41,9 +41,8 @@ function getD3(mapBox) {
 
 function renderD3(projection,path,svg,map,data) {
     function render() {
-        // Check if this is initial render or a rerender
         data.forEach(country => {
-            plotBubbles(svg,country.featureObj,projection)
+            plotBubbles(svg,country,projection)
         })
         function plotBubbles(svg, data, projection) {
             projection = getD3(map);
@@ -59,14 +58,14 @@ function renderD3(projection,path,svg,map,data) {
                 .append('circle')
                 .attr('class', 'country-circle')
                 .attr('data-country', (d) => {
-                    return d.country
+                    return d.featureObj.country
                 })
                 .classed('clicked', (d) => {
-                    return d.flag == true ? true : false
+                    return d.featureObj.flag == true ? true : false
                 })
-                .attr('cx', (d) => { return projection(d.coordinates)[0] })
-                .attr('cy', (d) => { return projection(d.coordinates)[1]; })
-                .attr('r', (d) => { return radius(d.amount); })
+                .attr('cx', (d) => { return projection(d.featureObj.coordinates)[0] })
+                .attr('cy', (d) => { return projection(d.featureObj.coordinates)[1]; })
+                .attr('r', (d) => { return radius(d.featureObj.amount); })
                 .on('mouseover', mouseoverHandler)
                 .on('mouseleave', mouseleaveHandler)
                 .on('click', mouseclickHandler)
@@ -78,40 +77,38 @@ function renderD3(projection,path,svg,map,data) {
                 (d.featureObj.flag == true && this.dataset.country != d.featureObj.country) ? d.featureObj.flag = false :
                     (d.featureObj.flag == true && this.dataset.country == d.country) ? d.featureObj.flag = true : ''
             })
-            if(item.flag == false) {
+            if(item.featureObj.flag == false) {
                 d3.select(this).classed('clicked',true)
                 const div = d3.select('#view-container').append('div')
                 div
-                    //TODO HTML STRUCTURE AANMAKEN VOOR TOOLTIP
-                    .html('<h2>'+item.country+'</h2>')
                     .attr('class', 'country-tooltip')
-                item.flag = true
+                constructWeaponChart(item,div)
+                item.featureObj.flag = true
             } else {
                 d3.select(this).classed('clicked', false)
                 d3.select('.country-tooltip').remove().exit()
-                item.flag = false
+                item.featureObj.flag = false
             }
         }
     }
     function update() {
         data.forEach(country => {
-            updateBubles(svg,country.featureObj,projection)
+            updateBubles(svg,country,projection)
         })
         function updateBubles(svg, data, projection) {
             projection = getD3(map);
             path.projection(projection)
             const selection = d3.selectAll('.country-circle')
             selection._groups[0].forEach(circle => {
-                (data.country == circle.dataset.country) &&
+                (data.featureObj.country == circle.dataset.country) &&
                     d3.select(circle)
                         .data([data])
-                        .attr('cx', (d) => { return projection(d.coordinates)[0] })
-                        .attr('cy', (d) => { return projection(d.coordinates)[1] })
+                        .attr('cx', (d) => { return projection(d.featureObj.coordinates)[0] })
+                        .attr('cy', (d) => { return projection(d.featureObj.coordinates)[1] })
             })
         }
     }
 
-    // Rerender map on move and viewreset
     map.on('viewreset', function() {
         update()
     })
@@ -119,7 +116,6 @@ function renderD3(projection,path,svg,map,data) {
         update()
     })
 
-    // render initial visualization
     render()
 }
 
@@ -133,4 +129,55 @@ function mouseleaveHandler() {
 function removeTooltip() {
     d3.selectAll('.country-tooltip').remove().exit()
     d3.selectAll('.country-circle.clicked').classed('clicked', false)
+}
+
+// TODO Refactor tooltip chart code
+function constructWeaponChart(item,div) {
+    const width = 350
+    const height = 350
+    const margin = 0
+    const radius = Math.min(width, height) / 2 - margin
+
+    // Add svg to the tooltip div
+    const piechartSvg = div
+        .append('svg')
+        .attr('class', 'pie-svg')
+        .attr('width', width)
+        .attr('height', height)
+        .append('g')
+        .attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')');
+
+    const pie = d3.pie()
+        .value(function(d) {return d.value; })
+    const data_ready = pie(d3.entries(item.weaponObj))
+
+    const arcGenerator = d3.arc()
+        .innerRadius(0)
+        .outerRadius(radius)
+
+    piechartSvg
+        .selectAll('mySlices')
+        .data(data_ready)
+        .enter()
+        .append('path')
+        .attr('d', arcGenerator)
+        .attr('fill', function(d){
+            return d.data.key == 'unknown' ? '#FF757B' :
+            d.data.key == 'vuurwapens' ? '#499DCC' :
+            d.data.key == 'spangeschut' ? '#B33037' :
+            d.data.key == 'werpwapen' ? '#FFFC8F' : console.log('Cultural object has not been placed in a category', d.data)
+        })
+        .attr('stroke', '#000')
+        .style('stroke-width', '2px')
+
+
+    piechartSvg
+        .selectAll('slices')
+        .data(data_ready)
+        .enter()
+        .append('text')
+        .text(function(d){ return 'grp ' + d.data.key})
+        .attr('transform', function(d) { return 'translate(' + arcGenerator.centroid(d) + ')';  })
+        .style('text-anchor', 'middle')
+        .style('font-size', 17)
 }

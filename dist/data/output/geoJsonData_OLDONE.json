@@ -8,11 +8,6 @@
                 4
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "spangeschut": 34,
-            "unknown": 1,
-            "vuurwapens": 5
         }
     },
     {
@@ -24,10 +19,6 @@
                 72
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "vuurwapens": 19,
-            "unknown": 2
         }
     },
     {
@@ -39,10 +30,6 @@
                 -10
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "spangeschut": 67,
-            "vuurwapens": 17
         }
     },
     {
@@ -54,10 +41,6 @@
                 27
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "spangeschut": 3,
-            "vuurwapens": 1
         }
     },
     {
@@ -69,10 +52,6 @@
                 -30
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "unknown": 3,
-            "vuurwapens": 1
         }
     },
     {
@@ -84,11 +63,6 @@
                 22
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "spangeschut": 24,
-            "vuurwapens": 25,
-            "unknown": 2
         }
     },
     {
@@ -100,10 +74,6 @@
                 -6
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "vuurwapens": 5,
-            "spangeschut": 1
         }
     },
     {
@@ -115,11 +85,6 @@
                 -5
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "unknown": 730,
-            "vuurwapens": 2906,
-            "spangeschut": 4459
         }
     },
     {
@@ -131,11 +96,6 @@
                 -2.5
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "vuurwapens": 47,
-            "unknown": 1,
-            "spangeschut": 62
         }
     },
     {
@@ -147,11 +107,6 @@
                 6.924
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "vuurwapens": 38,
-            "unknown": 3,
-            "spangeschut": 1
         }
     },
     {
@@ -163,11 +118,6 @@
                 -6
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "unknown": 11,
-            "vuurwapens": 662,
-            "spangeschut": 333
         }
     },
     {
@@ -179,9 +129,6 @@
                 10
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "vuurwapens": 5
         }
     },
     {
@@ -193,10 +140,6 @@
                 -12.5
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "vuurwapens": 41,
-            "spangeschut": 74
         }
     },
     {
@@ -208,11 +151,6 @@
                 -10
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "unknown": 6,
-            "spangeschut": 12,
-            "vuurwapens": 5
         }
     },
     {
@@ -224,10 +162,6 @@
                 23
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "unknown": 3,
-            "vuurwapens": 3
         }
     },
     {
@@ -239,9 +173,6 @@
                 1.421
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "vuurwapens": 21
         }
     },
     {
@@ -253,9 +184,6 @@
                 -14.33333
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "spangeschut": 2
         }
     },
     {
@@ -267,9 +195,6 @@
                 4
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "spangeschut": 2
         }
     },
     {
@@ -281,9 +206,6 @@
                 -34
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "spangeschut": 1
         }
     },
     {
@@ -295,10 +217,6 @@
                 18
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "spangeschut": 1,
-            "vuurwapens": 1
         }
     },
     {
@@ -310,10 +228,6 @@
                 13
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "spangeschut": 16,
-            "vuurwapens": 56
         }
     },
     {
@@ -325,9 +239,6 @@
                 2.5
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "spangeschut": 1
         }
     },
     {
@@ -339,10 +250,6 @@
                 35
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "unknown": 2,
-            "vuurwapens": 5
         }
     },
     {
@@ -354,10 +261,6 @@
                 -1
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "spangeschut": 4,
-            "vuurwapens": 9
         }
     },
     {
@@ -369,10 +272,6 @@
                 18
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "spangeschut": 5,
-            "vuurwapens": 1
         }
     },
     {
@@ -384,10 +283,6 @@
                 39
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "spangeschut": 1,
-            "vuurwapens": 1
         }
     },
     {
@@ -399,9 +294,6 @@
                 -25
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "vuurwapens": 106
         }
     },
     {
@@ -413,9 +305,6 @@
                 1.7
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "vuurwapens": 2
         }
     },
     {
@@ -427,10 +316,6 @@
                 -18.25
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "vuurwapens": 18,
-            "spangeschut": 1
         }
     },
     {
@@ -442,9 +327,6 @@
                 -16
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "vuurwapens": 27
         }
     },
     {
@@ -456,9 +338,6 @@
                 12
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "vuurwapens": 1
         }
     },
     {
@@ -470,10 +349,6 @@
                 7
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "vuurwapens": 5,
-            "spangeschut": 2
         }
     },
     {
@@ -485,9 +360,6 @@
                 25
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "vuurwapens": 5
         }
     },
     {
@@ -499,9 +371,6 @@
                 -15
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "vuurwapens": 14
         }
     },
     {
@@ -513,9 +382,6 @@
                 -8.83333
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "vuurwapens": 2
         }
     },
     {
@@ -527,10 +393,6 @@
                 60
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "vuurwapens": 4,
-            "spangeschut": 1
         }
     },
     {
@@ -542,9 +404,6 @@
                 -1.25
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "vuurwapens": 1
         }
     },
     {
@@ -556,9 +415,6 @@
                 5
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "vuurwapens": 1
         }
     },
     {
@@ -570,10 +426,6 @@
                 -23.33333
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "vuurwapens": 14,
-            "spangeschut": 2
         }
     },
     {
@@ -585,9 +437,6 @@
                 16.16667
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "vuurwapens": 11
         }
     },
     {
@@ -599,9 +448,6 @@
                 14.5
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "vuurwapens": 7
         }
     },
     {
@@ -613,9 +459,6 @@
                 21
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "vuurwapens": 1
         }
     },
     {
@@ -627,9 +470,6 @@
                 -42
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "vuurwapens": 2
         }
     },
     {
@@ -641,9 +481,6 @@
                 8.1
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "vuurwapens": 5
         }
     },
     {
@@ -655,9 +492,6 @@
                 32
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "vuurwapens": 1
         }
     },
     {
@@ -669,9 +503,6 @@
                 9.5
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "vuurwapens": 1
         }
     },
     {
@@ -683,9 +514,6 @@
                 6
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "vuurwapens": 9
         }
     },
     {
@@ -697,9 +525,6 @@
                 28
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "vuurwapens": 1
         }
     },
     {
@@ -711,9 +536,6 @@
                 -29
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "vuurwapens": 4
         }
     },
     {
@@ -725,9 +547,6 @@
                 -22
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "spangeschut": 5
         }
     },
     {
@@ -739,9 +558,6 @@
                 -17
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "spangeschut": 1
         }
     },
     {
@@ -753,9 +569,6 @@
                 -22
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "unknown": 1
         }
     },
     {
@@ -767,9 +580,6 @@
                 10
             ],
             "flag": false
-        },
-        "weaponObj": {
-            "spangeschut": 4
         }
     }
 ]
