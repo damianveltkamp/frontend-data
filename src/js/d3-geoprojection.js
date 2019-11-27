@@ -163,7 +163,7 @@ function constructWeaponChart(item,div) {
         .outerRadius(radius)
 
     piechartSvg
-        .selectAll('mySlices')
+        .selectAll('slices')
         .data(data_ready)
         .enter()
         .append('path')
@@ -177,13 +177,14 @@ function constructWeaponChart(item,div) {
         .attr('stroke', '#fff')
         .style('stroke-width', '2px')
 
-
     piechartSvg
         .selectAll('slices')
         .data(data_ready)
         .enter()
         .append('text')
-        .text(function(d){ return 'grp ' + d.data.key})
+        .text(function(d){
+            return d.data.key
+        })
         .attr('transform', function(d) { return 'translate(' + arcGenerator.centroid(d) + ')';  })
         .style('text-anchor', 'middle')
         .style('font-size', 17)
