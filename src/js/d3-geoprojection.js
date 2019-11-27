@@ -9,6 +9,9 @@ const mapBox = new mapboxgl.Map({
     center: [0,40],
     zoom: 1.8
 })
+mapBox.dragRotate.disable();
+mapBox.touchZoomRotate.disableRotation();
+
 buildMap(mapBox)
 function buildMap(mapBox) {
     init(mapBox)
@@ -82,9 +85,11 @@ function renderD3(projection,path,svg,map,data) {
                 const div = d3.select('#view-container').append('div')
                 div
                     .attr('class', 'country-tooltip')
-                constructHtmlHeader(item,div)
+                constructTooltipHeader(item,div)
+                constructTooltipParagraph(item,div)
                 constructWeaponChart(item,div)
                 constructWeaponList(item,div)
+                setTimeout(function(){ div.classed('loaded',true) }, 100);
                 item.featureObj.flag = true
             } else {
                 d3.select(this).classed('clicked', false)
@@ -169,7 +174,7 @@ function constructWeaponChart(item,div) {
             d.data.key == 'spangeschut' ? '#B33037' :
             d.data.key == 'werpwapen' ? '#FFFC8F' : console.log('Cultural object has not been placed in a category', d.data)
         })
-        .attr('stroke', '#000')
+        .attr('stroke', '#fff')
         .style('stroke-width', '2px')
 
 
@@ -186,7 +191,7 @@ function constructWeaponChart(item,div) {
     return div
 }
 
-function constructHtmlHeader(item,div) {
+function constructTooltipHeader(item,div) {
     div
         .append('h2')
         .text(item.featureObj.country)
@@ -199,6 +204,12 @@ function constructWeaponList(item,div) {
     entries.map(weapon => {
         // TODO List bouwen met wapen type en aantal
         ul.append('li').text(weapon[0] + ' ' + weapon[1])
-        console.log(weapon)
     })
+    return div
+}
+
+function constructTooltipParagraph(item,div) {
+    const output = 'Hier ziet u de wapen collectie van ' + item.featureObj.country + '.'
+    div.append('p').text(output)
+    return div
 }
