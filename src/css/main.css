@@ -12,7 +12,7 @@ body {
     height: 100%;
 }
 
-svg {
+#map svg {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -51,6 +51,10 @@ svg {
     width: 100%;
 }
 .country-tooltip h2 {
+    color: #fff;
+}
+.country-tooltip ul {}
+.country-tooltip ul li {
     color: #fff;
 }
 

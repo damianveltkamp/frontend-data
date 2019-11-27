@@ -82,7 +82,9 @@ function renderD3(projection,path,svg,map,data) {
                 const div = d3.select('#view-container').append('div')
                 div
                     .attr('class', 'country-tooltip')
+                constructHtmlHeader(item,div)
                 constructWeaponChart(item,div)
+                constructWeaponList(item,div)
                 item.featureObj.flag = true
             } else {
                 d3.select(this).classed('clicked', false)
@@ -180,4 +182,23 @@ function constructWeaponChart(item,div) {
         .attr('transform', function(d) { return 'translate(' + arcGenerator.centroid(d) + ')';  })
         .style('text-anchor', 'middle')
         .style('font-size', 17)
+
+    return div
+}
+
+function constructHtmlHeader(item,div) {
+    div
+        .append('h2')
+        .text(item.featureObj.country)
+    return div
+}
+
+function constructWeaponList(item,div) {
+    const entries = Object.entries(item.weaponObj)
+    const ul = div.append('ul')
+    entries.map(weapon => {
+        // TODO List bouwen met wapen type en aantal
+        ul.append('li').text(weapon[0] + ' ' + weapon[1])
+        console.log(weapon)
+    })
 }
