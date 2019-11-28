@@ -49,7 +49,7 @@ npm run prod
 ```
 
 ## Credits
-Credits go out to [Laurens](https://github.com/Razpudding), [Danny](https://github.com/dandevri) and Robert (have not been able to find your github *SADFACE*) for profiding us with all the information we need to get through this course.
+Credits go out to [Laurens](https://github.com/Razpudding), [Danny](https://github.com/dandevri) and [Robert](https://github.com/roberrrt-s) for profiding us with all the information we need to get through this course.
 
 ## Honourable mentions
 * [Wessel smit](https://github.com/WesselSmit)
