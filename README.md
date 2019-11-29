@@ -1,5 +1,9 @@
-# Functional-programming 
-Repository for the functional programming course
+# Frontend data
+Repository for the frontend data course
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/355c2686-6c94-4dfa-9fb9-27473ef7404b/deploy-status)](https://app.netlify.com/sites/agitated-shockley-c232e2/deploys)
+
+[Demo link](https://agitated-shockley-c232e2.netlify.com/)
 
 ## Table of contents
 * [Concept](#concept)
