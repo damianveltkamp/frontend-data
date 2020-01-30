@@ -25,6 +25,16 @@
                 ]
             },
             {
+                "categoryname": "unknown",
+                "amount": 1,
+                "weaponnames": [
+                    {
+                        "weaponname": "speelgoed",
+                        "amount": 1
+                    }
+                ]
+            },
+            {
                 "categoryname": "vuurwapens",
                 "amount": 5,
                 "weaponnames": [
@@ -37,7 +47,7 @@
                         "amount": 2
                     },
                     {
-                        "weaponname": "bijl",
+                        "weaponname": "bijl? /knots?",
                         "amount": 2
                     }
                 ]
@@ -61,6 +71,20 @@
                 "weaponnames": []
             },
             {
+                "categoryname": "unknown",
+                "amount": 2,
+                "weaponnames": [
+                    {
+                        "weaponname": "vogelspeer (model)",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "lans (model)",
+                        "amount": 1
+                    }
+                ]
+            },
+            {
                 "categoryname": "vuurwapens",
                 "amount": 19,
                 "weaponnames": [
@@ -70,7 +94,11 @@
                     },
                     {
                         "weaponname": "speer",
-                        "amount": 11
+                        "amount": 2
+                    },
+                    {
+                        "weaponname": "vogelspeer",
+                        "amount": 5
                     },
                     {
                         "weaponname": "zijtand",
@@ -78,6 +106,14 @@
                     },
                     {
                         "weaponname": "lans",
+                        "amount": 2
+                    },
+                    {
+                        "weaponname": "handlans",
+                        "amount": 2
+                    },
+                    {
+                        "weaponname": "speertand",
                         "amount": 4
                     },
                     {
@@ -109,9 +145,18 @@
                     },
                     {
                         "weaponname": "pijl",
-                        "amount": 60
+                        "amount": 58
+                    },
+                    {
+                        "weaponname": "jachtpijl",
+                        "amount": 2
                     }
                 ]
+            },
+            {
+                "categoryname": "unknown",
+                "amount": 0,
+                "weaponnames": []
             },
             {
                 "categoryname": "vuurwapens",
@@ -167,6 +212,11 @@
                 ]
             },
             {
+                "categoryname": "unknown",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
                 "categoryname": "vuurwapens",
                 "amount": 1,
                 "weaponnames": [
@@ -193,6 +243,20 @@
                 "categoryname": "spangeschut",
                 "amount": 0,
                 "weaponnames": []
+            },
+            {
+                "categoryname": "unknown",
+                "amount": 3,
+                "weaponnames": [
+                    {
+                        "weaponname": "steenslinger",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "vlechtwerk",
+                        "amount": 2
+                    }
+                ]
             },
             {
                 "categoryname": "vuurwapens",
@@ -223,15 +287,45 @@
                 "weaponnames": [
                     {
                         "weaponname": "boog",
-                        "amount": 12
+                        "amount": 4
                     },
                     {
                         "weaponname": "katapult",
                         "amount": 1
                     },
                     {
+                        "weaponname": "kruisboog",
+                        "amount": 2
+                    },
+                    {
+                        "weaponname": "boog (onderdeel)",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "kogelboog",
+                        "amount": 2
+                    },
+                    {
+                        "weaponname": "handboog",
+                        "amount": 3
+                    },
+                    {
                         "weaponname": "pijl",
-                        "amount": 11
+                        "amount": 10
+                    },
+                    {
+                        "weaponname": "strijdpijl",
+                        "amount": 1
+                    }
+                ]
+            },
+            {
+                "categoryname": "unknown",
+                "amount": 2,
+                "weaponnames": [
+                    {
+                        "weaponname": "pijl (bundel)",
+                        "amount": 2
                     }
                 ]
             },
@@ -253,7 +347,7 @@
                     },
                     {
                         "weaponname": "bijl",
-                        "amount": 5
+                        "amount": 2
                     },
                     {
                         "weaponname": "sierwapen",
@@ -262,6 +356,10 @@
                     {
                         "weaponname": "slagwapen",
                         "amount": 2
+                    },
+                    {
+                        "weaponname": "bijl (ceremoniëel)",
+                        "amount": 3
                     }
                 ]
             }
@@ -287,6 +385,11 @@
                         "amount": 1
                     }
                 ]
+            },
+            {
+                "categoryname": "unknown",
+                "amount": 0,
+                "weaponnames": []
             },
             {
                 "categoryname": "vuurwapens",
@@ -321,11 +424,81 @@
                 "weaponnames": [
                     {
                         "weaponname": "boog",
-                        "amount": 351
+                        "amount": 315
+                    },
+                    {
+                        "weaponname": "boog ; pijl",
+                        "amount": 9
+                    },
+                    {
+                        "weaponname": "boog (onderdeel)",
+                        "amount": 5
+                    },
+                    {
+                        "weaponname": "handboog",
+                        "amount": 19
                     },
                     {
                         "weaponname": "pijl",
-                        "amount": 4108
+                        "amount": 3332
+                    },
+                    {
+                        "weaponname": "varkenspijl",
+                        "amount": 18
+                    },
+                    {
+                        "weaponname": "vispijl",
+                        "amount": 64
+                    },
+                    {
+                        "weaponname": "strijdpijl",
+                        "amount": 435
+                    },
+                    {
+                        "weaponname": "jachtpijl",
+                        "amount": 67
+                    },
+                    {
+                        "weaponname": "vogelpijl",
+                        "amount": 22
+                    },
+                    {
+                        "weaponname": "oorlogspijl",
+                        "amount": 134
+                    }
+                ]
+            },
+            {
+                "categoryname": "unknown",
+                "amount": 730,
+                "weaponnames": [
+                    {
+                        "weaponname": "slinger",
+                        "amount": 11
+                    },
+                    {
+                        "weaponname": "pijl (bundel)",
+                        "amount": 586
+                    },
+                    {
+                        "weaponname": "kostuumset bruidegom",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "tempelattribuut",
+                        "amount": 26
+                    },
+                    {
+                        "weaponname": "pijlenkoker ; blaasroerpijl (bundel)",
+                        "amount": 13
+                    },
+                    {
+                        "weaponname": "strijdpijl (bundel)",
+                        "amount": 21
+                    },
+                    {
+                        "weaponname": "bundel",
+                        "amount": 12
                     }
                 ]
             },
@@ -334,20 +507,272 @@
                 "amount": 2906,
                 "weaponnames": [
                     {
-                        "weaponname": "kanon",
-                        "amount": 720
+                        "weaponname": "drietand",
+                        "amount": 3
                     },
                     {
-                        "weaponname": "pistool",
-                        "amount": 1160
+                        "weaponname": "speer",
+                        "amount": 1067
+                    },
+                    {
+                        "weaponname": "vuursteengeweer / donderbus",
+                        "amount": 4
                     },
                     {
                         "weaponname": "geweer",
-                        "amount": 430
+                        "amount": 16
+                    },
+                    {
+                        "weaponname": "speer ; geïnventariseerd onder ander inventarisnummer",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "offermes",
+                        "amount": 11
+                    },
+                    {
+                        "weaponname": "vuursteenslotgeweer",
+                        "amount": 2
+                    },
+                    {
+                        "weaponname": "offermes ; schede",
+                        "amount": 2
+                    },
+                    {
+                        "weaponname": "mes (onderdeel)",
+                        "amount": 5
+                    },
+                    {
+                        "weaponname": "speer & schede",
+                        "amount": 41
+                    },
+                    {
+                        "weaponname": "ceremoniële speer",
+                        "amount": 5
+                    },
+                    {
+                        "weaponname": "ceremoniële speer & schede",
+                        "amount": 4
+                    },
+                    {
+                        "weaponname": "dans-speer",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "speerversiering",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "speer & speer met schede",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "lans",
+                        "amount": 1214
+                    },
+                    {
+                        "weaponname": "speer? / lans?",
+                        "amount": 2
+                    },
+                    {
+                        "weaponname": "staatsielans",
+                        "amount": 3
+                    },
+                    {
+                        "weaponname": "jachtspeer",
+                        "amount": 12
+                    },
+                    {
+                        "weaponname": "lanspunt",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "lans ; schede",
+                        "amount": 22
+                    },
+                    {
+                        "weaponname": "dansspeer-onderdeel",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "zwaard ; schede",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "schede",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "werpspiespunt",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "bijl",
+                        "amount": 17
+                    },
+                    {
+                        "weaponname": "zwaard",
+                        "amount": 10
+                    },
+                    {
+                        "weaponname": "dolk",
+                        "amount": 9
+                    },
+                    {
+                        "weaponname": "strijdknots",
+                        "amount": 18
+                    },
+                    {
+                        "weaponname": "knots",
+                        "amount": 257
+                    },
+                    {
+                        "weaponname": "mes",
+                        "amount": 23
+                    },
+                    {
+                        "weaponname": "staatsiespeer",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "slagwapen",
+                        "amount": 26
+                    },
+                    {
+                        "weaponname": "werpspeer",
+                        "amount": 22
+                    },
+                    {
+                        "weaponname": "ceremoniëel wapen",
+                        "amount": 2
+                    },
+                    {
+                        "weaponname": "ijzergeld / bijlgeld",
+                        "amount": 2
+                    },
+                    {
+                        "weaponname": "slagwapen ; schede",
+                        "amount": 2
+                    },
+                    {
+                        "weaponname": "degenstok",
+                        "amount": 6
+                    },
+                    {
+                        "weaponname": "wapen",
+                        "amount": 13
+                    },
+                    {
+                        "weaponname": "dolk (onderdeel)",
+                        "amount": 3
+                    },
+                    {
+                        "weaponname": "kris (onderdeel)",
+                        "amount": 3
+                    },
+                    {
+                        "weaponname": "degen",
+                        "amount": 2
+                    },
+                    {
+                        "weaponname": "schild",
+                        "amount": 4
+                    },
+                    {
+                        "weaponname": "ceremonieel mes",
+                        "amount": 2
+                    },
+                    {
+                        "weaponname": "stok",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "kapmes",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "kris",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "zwaard (onderdeel)",
+                        "amount": 2
+                    },
+                    {
+                        "weaponname": "speerpunt",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "krislemmet",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "werplans",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "mes ; schede",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "werpspies",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "staf",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "kanon",
+                        "amount": 21
+                    },
+                    {
+                        "weaponname": "pistool ; loop",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "donderbus ; voorlader met vuursteenslot",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "pistool",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "draaibas ; voorlader met zundgat",
+                        "amount": 8
+                    },
+                    {
+                        "weaponname": "revolver ; achterlader met middenontsteking",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "kanon, draaibas ; voorlader met zundgat",
+                        "amount": 6
+                    },
+                    {
+                        "weaponname": "kanon ; voorlader met zundgat",
+                        "amount": 2
+                    },
+                    {
+                        "weaponname": "bola",
+                        "amount": 1
                     },
                     {
                         "weaponname": "donderbus",
-                        "amount": 596
+                        "amount": 2
+                    },
+                    {
+                        "weaponname": "projectielwapen",
+                        "amount": 5
+                    },
+                    {
+                        "weaponname": "ploertendoder",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "revolver",
+                        "amount": 1
                     }
                 ]
             }
@@ -375,6 +800,16 @@
                 ]
             },
             {
+                "categoryname": "unknown",
+                "amount": 1,
+                "weaponnames": [
+                    {
+                        "weaponname": "pijl (bundel)",
+                        "amount": 1
+                    }
+                ]
+            },
+            {
                 "categoryname": "vuurwapens",
                 "amount": 47,
                 "weaponnames": [
@@ -384,19 +819,27 @@
                     },
                     {
                         "weaponname": "speer",
-                        "amount": 27
+                        "amount": 26
+                    },
+                    {
+                        "weaponname": "harpoenspeer",
+                        "amount": 1
                     },
                     {
                         "weaponname": "lans",
                         "amount": 7
                     },
                     {
-                        "weaponname": "bijl",
-                        "amount": 8
+                        "weaponname": "ceremoniële bijl",
+                        "amount": 5
                     },
                     {
                         "weaponname": "mes",
                         "amount": 2
+                    },
+                    {
+                        "weaponname": "bijl",
+                        "amount": 3
                     },
                     {
                         "weaponname": "kortzwaard",
@@ -427,6 +870,20 @@
                 "weaponnames": [
                     {
                         "weaponname": "pijl",
+                        "amount": 1
+                    }
+                ]
+            },
+            {
+                "categoryname": "unknown",
+                "amount": 3,
+                "weaponnames": [
+                    {
+                        "weaponname": "steenslinger",
+                        "amount": 2
+                    },
+                    {
+                        "weaponname": "pijl (bundel)",
                         "amount": 1
                     }
                 ]
@@ -471,8 +928,26 @@
                         "amount": 8
                     },
                     {
+                        "weaponname": "boog ; pijl",
+                        "amount": 22
+                    },
+                    {
                         "weaponname": "pijl",
-                        "amount": 325
+                        "amount": 297
+                    },
+                    {
+                        "weaponname": "vispijl",
+                        "amount": 6
+                    }
+                ]
+            },
+            {
+                "categoryname": "unknown",
+                "amount": 11,
+                "weaponnames": [
+                    {
+                        "weaponname": "steenslinger",
+                        "amount": 11
                     }
                 ]
             },
@@ -482,7 +957,23 @@
                 "weaponnames": [
                     {
                         "weaponname": "speer",
-                        "amount": 477
+                        "amount": 391
+                    },
+                    {
+                        "weaponname": "ceremoniële speer",
+                        "amount": 11
+                    },
+                    {
+                        "weaponname": "speer (bovenstuk)",
+                        "amount": 2
+                    },
+                    {
+                        "weaponname": "speer, dansspeer ?",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "speer, koningsspeer",
+                        "amount": 2
                     },
                     {
                         "weaponname": "lans",
@@ -494,7 +985,11 @@
                     },
                     {
                         "weaponname": "bijl",
-                        "amount": 20
+                        "amount": 19
+                    },
+                    {
+                        "weaponname": "werpspeer",
+                        "amount": 65
                     },
                     {
                         "weaponname": "slagwapen",
@@ -509,8 +1004,20 @@
                         "amount": 1
                     },
                     {
+                        "weaponname": "ceremoniële speer & schede",
+                        "amount": 4
+                    },
+                    {
                         "weaponname": "schild",
                         "amount": 2
+                    },
+                    {
+                        "weaponname": "staatsiespeer",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "ceremoniële bijl",
+                        "amount": 1
                     },
                     {
                         "weaponname": "zwaardknots",
@@ -537,6 +1044,11 @@
         "weaponObj": [
             {
                 "categoryname": "spangeschut",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
+                "categoryname": "unknown",
                 "amount": 0,
                 "weaponnames": []
             },
@@ -582,6 +1094,11 @@
                 ]
             },
             {
+                "categoryname": "unknown",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
                 "categoryname": "vuurwapens",
                 "amount": 41,
                 "weaponnames": [
@@ -603,7 +1120,11 @@
                     },
                     {
                         "weaponname": "bijl",
-                        "amount": 2
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "ceremoniële bijl",
+                        "amount": 1
                     },
                     {
                         "weaponname": "knots",
@@ -635,6 +1156,24 @@
                     {
                         "weaponname": "pijl",
                         "amount": 12
+                    }
+                ]
+            },
+            {
+                "categoryname": "unknown",
+                "amount": 6,
+                "weaponnames": [
+                    {
+                        "weaponname": "steenslinger",
+                        "amount": 3
+                    },
+                    {
+                        "weaponname": "slinger",
+                        "amount": 2
+                    },
+                    {
+                        "weaponname": "kostuum (onderdeel)",
+                        "amount": 1
                     }
                 ]
             },
@@ -679,6 +1218,16 @@
                 "weaponnames": []
             },
             {
+                "categoryname": "unknown",
+                "amount": 3,
+                "weaponnames": [
+                    {
+                        "weaponname": "slinger",
+                        "amount": 3
+                    }
+                ]
+            },
+            {
                 "categoryname": "vuurwapens",
                 "amount": 3,
                 "weaponnames": [
@@ -711,12 +1260,21 @@
                 "weaponnames": []
             },
             {
+                "categoryname": "unknown",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
                 "categoryname": "vuurwapens",
                 "amount": 21,
                 "weaponnames": [
                     {
                         "weaponname": "speer",
-                        "amount": 12
+                        "amount": 11
+                    },
+                    {
+                        "weaponname": "wapen ; speer ?",
+                        "amount": 1
                     },
                     {
                         "weaponname": "knots ; zwaard",
@@ -768,6 +1326,11 @@
                 ]
             },
             {
+                "categoryname": "unknown",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
                 "categoryname": "vuurwapens",
                 "amount": 0,
                 "weaponnames": []
@@ -800,6 +1363,11 @@
                 ]
             },
             {
+                "categoryname": "unknown",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
                 "categoryname": "vuurwapens",
                 "amount": 0,
                 "weaponnames": []
@@ -828,6 +1396,11 @@
                 ]
             },
             {
+                "categoryname": "unknown",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
                 "categoryname": "vuurwapens",
                 "amount": 0,
                 "weaponnames": []
@@ -854,6 +1427,11 @@
                         "amount": 1
                     }
                 ]
+            },
+            {
+                "categoryname": "unknown",
+                "amount": 0,
+                "weaponnames": []
             },
             {
                 "categoryname": "vuurwapens",
@@ -893,12 +1471,21 @@
                 ]
             },
             {
+                "categoryname": "unknown",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
                 "categoryname": "vuurwapens",
                 "amount": 56,
                 "weaponnames": [
                     {
                         "weaponname": "lans",
-                        "amount": 56
+                        "amount": 53
+                    },
+                    {
+                        "weaponname": "lans ; schede",
+                        "amount": 3
                     }
                 ]
             }
@@ -926,6 +1513,11 @@
                 ]
             },
             {
+                "categoryname": "unknown",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
                 "categoryname": "vuurwapens",
                 "amount": 0,
                 "weaponnames": []
@@ -947,6 +1539,20 @@
                 "categoryname": "spangeschut",
                 "amount": 0,
                 "weaponnames": []
+            },
+            {
+                "categoryname": "unknown",
+                "amount": 2,
+                "weaponnames": [
+                    {
+                        "weaponname": "steenslinger",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "slinger",
+                        "amount": 1
+                    }
+                ]
             },
             {
                 "categoryname": "vuurwapens",
@@ -984,7 +1590,7 @@
                 "amount": 4,
                 "weaponnames": [
                     {
-                        "weaponname": "boog",
+                        "weaponname": "kruisboog",
                         "amount": 2
                     },
                     {
@@ -994,12 +1600,21 @@
                 ]
             },
             {
+                "categoryname": "unknown",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
                 "categoryname": "vuurwapens",
                 "amount": 9,
                 "weaponnames": [
                     {
                         "weaponname": "speer",
-                        "amount": 9
+                        "amount": 7
+                    },
+                    {
+                        "weaponname": "werpspeer",
+                        "amount": 2
                     }
                 ]
             }
@@ -1025,10 +1640,19 @@
                         "amount": 2
                     },
                     {
-                        "weaponname": "pijl",
-                        "amount": 3
+                        "weaponname": "pijl (fragment)",
+                        "amount": 2
+                    },
+                    {
+                        "weaponname": "pijl? (fragment)",
+                        "amount": 1
                     }
                 ]
+            },
+            {
+                "categoryname": "unknown",
+                "amount": 0,
+                "weaponnames": []
             },
             {
                 "categoryname": "vuurwapens",
@@ -1064,6 +1688,11 @@
                 ]
             },
             {
+                "categoryname": "unknown",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
                 "categoryname": "vuurwapens",
                 "amount": 1,
                 "weaponnames": [
@@ -1092,12 +1721,21 @@
                 "weaponnames": []
             },
             {
+                "categoryname": "unknown",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
                 "categoryname": "vuurwapens",
                 "amount": 106,
                 "weaponnames": [
                     {
                         "weaponname": "speer",
-                        "amount": 57
+                        "amount": 55
+                    },
+                    {
+                        "weaponname": "werpspeer",
+                        "amount": 2
                     },
                     {
                         "weaponname": "lans",
@@ -1144,6 +1782,11 @@
                 "weaponnames": []
             },
             {
+                "categoryname": "unknown",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
                 "categoryname": "vuurwapens",
                 "amount": 2,
                 "weaponnames": [
@@ -1152,7 +1795,7 @@
                         "amount": 1
                     },
                     {
-                        "weaponname": "lans",
+                        "weaponname": "lans / werpspies",
                         "amount": 1
                     }
                 ]
@@ -1181,12 +1824,21 @@
                 ]
             },
             {
+                "categoryname": "unknown",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
                 "categoryname": "vuurwapens",
                 "amount": 18,
                 "weaponnames": [
                     {
                         "weaponname": "speer",
-                        "amount": 17
+                        "amount": 3
+                    },
+                    {
+                        "weaponname": "werpspeer ; assegaai",
+                        "amount": 14
                     },
                     {
                         "weaponname": "bijl",
@@ -1209,6 +1861,11 @@
         "weaponObj": [
             {
                 "categoryname": "spangeschut",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
+                "categoryname": "unknown",
                 "amount": 0,
                 "weaponnames": []
             },
@@ -1249,6 +1906,11 @@
                 "weaponnames": []
             },
             {
+                "categoryname": "unknown",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
                 "categoryname": "vuurwapens",
                 "amount": 1,
                 "weaponnames": [
@@ -1282,15 +1944,28 @@
                 ]
             },
             {
+                "categoryname": "unknown",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
                 "categoryname": "vuurwapens",
                 "amount": 5,
                 "weaponnames": [
                     {
                         "weaponname": "speer",
-                        "amount": 4
+                        "amount": 2
                     },
                     {
                         "weaponname": "ceremonieel mes ; werpmes",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "ceremoniële speer (paar)",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "ceremoniële speer",
                         "amount": 1
                     }
                 ]
@@ -1310,6 +1985,11 @@
         "weaponObj": [
             {
                 "categoryname": "spangeschut",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
+                "categoryname": "unknown",
                 "amount": 0,
                 "weaponnames": []
             },
@@ -1350,6 +2030,11 @@
                 "weaponnames": []
             },
             {
+                "categoryname": "unknown",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
                 "categoryname": "vuurwapens",
                 "amount": 14,
                 "weaponnames": [
@@ -1382,12 +2067,21 @@
                 "weaponnames": []
             },
             {
+                "categoryname": "unknown",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
                 "categoryname": "vuurwapens",
                 "amount": 2,
                 "weaponnames": [
                     {
                         "weaponname": "speer",
-                        "amount": 2
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "jachtspeer",
+                        "amount": 1
                     }
                 ]
             }
@@ -1409,10 +2103,15 @@
                 "amount": 1,
                 "weaponnames": [
                     {
-                        "weaponname": "pijl",
+                        "weaponname": "boog ; pijl",
                         "amount": 1
                     }
                 ]
+            },
+            {
+                "categoryname": "unknown",
+                "amount": 0,
+                "weaponnames": []
             },
             {
                 "categoryname": "vuurwapens",
@@ -1423,8 +2122,12 @@
                         "amount": 1
                     },
                     {
-                        "weaponname": "lans",
-                        "amount": 3
+                        "weaponname": "drijfhout van drijvende lans",
+                        "amount": 1
+                    },
+                    {
+                        "weaponname": "stok van drijvende lans",
+                        "amount": 2
                     }
                 ]
             }
@@ -1443,6 +2146,11 @@
         "weaponObj": [
             {
                 "categoryname": "spangeschut",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
+                "categoryname": "unknown",
                 "amount": 0,
                 "weaponnames": []
             },
@@ -1471,6 +2179,11 @@
         "weaponObj": [
             {
                 "categoryname": "spangeschut",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
+                "categoryname": "unknown",
                 "amount": 0,
                 "weaponnames": []
             },
@@ -1508,6 +2221,11 @@
                 ]
             },
             {
+                "categoryname": "unknown",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
                 "categoryname": "vuurwapens",
                 "amount": 14,
                 "weaponnames": [
@@ -1540,12 +2258,21 @@
                 "weaponnames": []
             },
             {
+                "categoryname": "unknown",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
                 "categoryname": "vuurwapens",
                 "amount": 11,
                 "weaponnames": [
                     {
                         "weaponname": "lans",
-                        "amount": 11
+                        "amount": 8
+                    },
+                    {
+                        "weaponname": "lansheft",
+                        "amount": 3
                     }
                 ]
             }
@@ -1564,6 +2291,11 @@
         "weaponObj": [
             {
                 "categoryname": "spangeschut",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
+                "categoryname": "unknown",
                 "amount": 0,
                 "weaponnames": []
             },
@@ -1608,6 +2340,11 @@
                 "weaponnames": []
             },
             {
+                "categoryname": "unknown",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
                 "categoryname": "vuurwapens",
                 "amount": 1,
                 "weaponnames": [
@@ -1636,6 +2373,11 @@
                 "weaponnames": []
             },
             {
+                "categoryname": "unknown",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
                 "categoryname": "vuurwapens",
                 "amount": 2,
                 "weaponnames": [
@@ -1660,6 +2402,11 @@
         "weaponObj": [
             {
                 "categoryname": "spangeschut",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
+                "categoryname": "unknown",
                 "amount": 0,
                 "weaponnames": []
             },
@@ -1700,6 +2447,11 @@
                 "weaponnames": []
             },
             {
+                "categoryname": "unknown",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
                 "categoryname": "vuurwapens",
                 "amount": 1,
                 "weaponnames": [
@@ -1724,6 +2476,11 @@
         "weaponObj": [
             {
                 "categoryname": "spangeschut",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
+                "categoryname": "unknown",
                 "amount": 0,
                 "weaponnames": []
             },
@@ -1756,6 +2513,11 @@
                 "weaponnames": []
             },
             {
+                "categoryname": "unknown",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
                 "categoryname": "vuurwapens",
                 "amount": 9,
                 "weaponnames": [
@@ -1784,6 +2546,11 @@
                 "weaponnames": []
             },
             {
+                "categoryname": "unknown",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
                 "categoryname": "vuurwapens",
                 "amount": 1,
                 "weaponnames": [
@@ -1808,6 +2575,11 @@
         "weaponObj": [
             {
                 "categoryname": "spangeschut",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
+                "categoryname": "unknown",
                 "amount": 0,
                 "weaponnames": []
             },
@@ -1849,6 +2621,11 @@
                 ]
             },
             {
+                "categoryname": "unknown",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
                 "categoryname": "vuurwapens",
                 "amount": 0,
                 "weaponnames": []
@@ -1877,6 +2654,11 @@
                 ]
             },
             {
+                "categoryname": "unknown",
+                "amount": 0,
+                "weaponnames": []
+            },
+            {
                 "categoryname": "vuurwapens",
                 "amount": 0,
                 "weaponnames": []
@@ -1898,6 +2680,16 @@
                 "categoryname": "spangeschut",
                 "amount": 0,
                 "weaponnames": []
+            },
+            {
+                "categoryname": "unknown",
+                "amount": 1,
+                "weaponnames": [
+                    {
+                        "weaponname": "pijlkoker & boog & pijl",
+                        "amount": 1
+                    }
+                ]
             },
             {
                 "categoryname": "vuurwapens",
@@ -1926,6 +2718,11 @@
                         "amount": 4
                     }
                 ]
+            },
+            {
+                "categoryname": "unknown",
+                "amount": 0,
+                "weaponnames": []
             },
             {
                 "categoryname": "vuurwapens",

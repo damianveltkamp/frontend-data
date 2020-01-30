@@ -1,0 +1,775 @@
+[
+    {
+        "featureObj": {
+            "country": "Suriname",
+            "amount": 40,
+            "coordinates": [
+                -56,
+                4
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "spangeschut": 34,
+            "unknown": 1,
+            "vuurwapens": 5
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Greenland",
+            "amount": 21,
+            "coordinates": [
+                -40,
+                72
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "vuurwapens": 19,
+            "unknown": 2
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Brazil",
+            "amount": 84,
+            "coordinates": [
+                -55,
+                -10
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "spangeschut": 67,
+            "vuurwapens": 17
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Egypt",
+            "amount": 4,
+            "coordinates": [
+                30,
+                27
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "spangeschut": 3,
+            "vuurwapens": 1
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Chile",
+            "amount": 4,
+            "coordinates": [
+                -71,
+                -30
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "unknown": 3,
+            "vuurwapens": 1
+        }
+    },
+    {
+        "featureObj": {
+            "country": "India",
+            "amount": 51,
+            "coordinates": [
+                79,
+                22
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "spangeschut": 24,
+            "vuurwapens": 25,
+            "unknown": 2
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Tanzania",
+            "amount": 6,
+            "coordinates": [
+                35,
+                -6
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "vuurwapens": 5,
+            "spangeschut": 1
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Indonesia",
+            "amount": 8095,
+            "coordinates": [
+                120,
+                -5
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "unknown": 730,
+            "vuurwapens": 2906,
+            "spangeschut": 4459
+        }
+    },
+    {
+        "featureObj": {
+            "country": "DR Congo",
+            "amount": 110,
+            "coordinates": [
+                23.5,
+                -2.5
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "vuurwapens": 47,
+            "unknown": 1,
+            "spangeschut": 62
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Micronesia",
+            "amount": 42,
+            "coordinates": [
+                158.162,
+                6.924
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "vuurwapens": 38,
+            "unknown": 3,
+            "spangeschut": 1
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Papua New Guinea",
+            "amount": 1006,
+            "coordinates": [
+                147,
+                -6
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "unknown": 11,
+            "vuurwapens": 662,
+            "spangeschut": 333
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Nigeria",
+            "amount": 5,
+            "coordinates": [
+                8,
+                10
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "vuurwapens": 5
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Angola",
+            "amount": 115,
+            "coordinates": [
+                18.5,
+                -12.5
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "vuurwapens": 41,
+            "spangeschut": 74
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Peru",
+            "amount": 23,
+            "coordinates": [
+                -75.25,
+                -10
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "unknown": 6,
+            "spangeschut": 12,
+            "vuurwapens": 5
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Mexico",
+            "amount": 6,
+            "coordinates": [
+                -102,
+                23
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "unknown": 3,
+            "vuurwapens": 3
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Kiribati",
+            "amount": 21,
+            "coordinates": [
+                172.984,
+                1.421
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "vuurwapens": 21
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Zambia",
+            "amount": 2,
+            "coordinates": [
+                28.5,
+                -14.33333
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "spangeschut": 2
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Colombia",
+            "amount": 2,
+            "coordinates": [
+                -73.25,
+                4
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "spangeschut": 2
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Argentina",
+            "amount": 1,
+            "coordinates": [
+                -64,
+                -34
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "spangeschut": 1
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Laos",
+            "amount": 2,
+            "coordinates": [
+                105,
+                18
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "spangeschut": 1,
+            "vuurwapens": 1
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Philippines",
+            "amount": 72,
+            "coordinates": [
+                122,
+                13
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "spangeschut": 16,
+            "vuurwapens": 56
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Malaysia",
+            "amount": 1,
+            "coordinates": [
+                112.5,
+                2.5
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "spangeschut": 1
+        }
+    },
+    {
+        "featureObj": {
+            "country": "China",
+            "amount": 7,
+            "coordinates": [
+                105,
+                35
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "unknown": 2,
+            "vuurwapens": 5
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Congo",
+            "amount": 13,
+            "coordinates": [
+                15.5,
+                -1
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "spangeschut": 4,
+            "vuurwapens": 9
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Mali",
+            "amount": 6,
+            "coordinates": [
+                -2,
+                18
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "spangeschut": 5,
+            "vuurwapens": 1
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Turkey",
+            "amount": 2,
+            "coordinates": [
+                35,
+                39
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "spangeschut": 1,
+            "vuurwapens": 1
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Australia",
+            "amount": 106,
+            "coordinates": [
+                135,
+                -25
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "vuurwapens": 106
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Equatorial Guinea",
+            "amount": 2,
+            "coordinates": [
+                10.5,
+                1.7
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "vuurwapens": 2
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Mozambique",
+            "amount": 19,
+            "coordinates": [
+                35,
+                -18.25
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "vuurwapens": 18,
+            "spangeschut": 1
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Vanuatu",
+            "amount": 27,
+            "coordinates": [
+                167,
+                -16
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "vuurwapens": 27
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Guinea-Bissau",
+            "amount": 1,
+            "coordinates": [
+                -15,
+                12
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "vuurwapens": 1
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Central African Republic",
+            "amount": 7,
+            "coordinates": [
+                21,
+                7
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "vuurwapens": 5,
+            "spangeschut": 2
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Saudi Arabia",
+            "amount": 5,
+            "coordinates": [
+                45,
+                25
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "vuurwapens": 5
+        }
+    },
+    {
+        "featureObj": {
+            "country": "French Polynesia",
+            "amount": 14,
+            "coordinates": [
+                -140,
+                -15
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "vuurwapens": 14
+        }
+    },
+    {
+        "featureObj": {
+            "country": "East Timor",
+            "amount": 2,
+            "coordinates": [
+                125.75,
+                -8.83333
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "vuurwapens": 2
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Russia",
+            "amount": 5,
+            "coordinates": [
+                100,
+                60
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "vuurwapens": 4,
+            "spangeschut": 1
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Ecuador",
+            "amount": 1,
+            "coordinates": [
+                -78.25,
+                -1.25
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "vuurwapens": 1
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Guyana",
+            "amount": 1,
+            "coordinates": [
+                -59,
+                5
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "vuurwapens": 1
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Paraguay",
+            "amount": 16,
+            "coordinates": [
+                -58,
+                -23.33333
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "vuurwapens": 14,
+            "spangeschut": 2
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Vietnam",
+            "amount": 11,
+            "coordinates": [
+                107.83333,
+                16.16667
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "vuurwapens": 11
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Senegal",
+            "amount": 7,
+            "coordinates": [
+                -14.25,
+                14.5
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "vuurwapens": 7
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Oman",
+            "amount": 1,
+            "coordinates": [
+                57,
+                21
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "vuurwapens": 1
+        }
+    },
+    {
+        "featureObj": {
+            "country": "New Zealand",
+            "amount": 2,
+            "coordinates": [
+                174,
+                -42
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "vuurwapens": 2
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Ghana",
+            "amount": 5,
+            "coordinates": [
+                -1.2,
+                8.1
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "vuurwapens": 5
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Iran",
+            "amount": 1,
+            "coordinates": [
+                53,
+                32
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "vuurwapens": 1
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Benin",
+            "amount": 1,
+            "coordinates": [
+                2.25,
+                9.5
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "vuurwapens": 1
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Cameroon",
+            "amount": 9,
+            "coordinates": [
+                12.5,
+                6
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "vuurwapens": 9
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Algeria",
+            "amount": 1,
+            "coordinates": [
+                3,
+                28
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "vuurwapens": 1
+        }
+    },
+    {
+        "featureObj": {
+            "country": "South Africa",
+            "amount": 4,
+            "coordinates": [
+                24,
+                -29
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "vuurwapens": 4
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Namibia",
+            "amount": 5,
+            "coordinates": [
+                17,
+                -22
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "spangeschut": 5
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Bolivia",
+            "amount": 1,
+            "coordinates": [
+                -65,
+                -17
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "spangeschut": 1
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Botswana",
+            "amount": 1,
+            "coordinates": [
+                24,
+                -22
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "unknown": 1
+        }
+    },
+    {
+        "featureObj": {
+            "country": "Costa Rica",
+            "amount": 4,
+            "coordinates": [
+                -84,
+                10
+            ],
+            "flag": false
+        },
+        "weaponObj": {
+            "spangeschut": 4
+        }
+    }
+]

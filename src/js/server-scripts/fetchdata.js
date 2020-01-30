@@ -44,21 +44,38 @@ fetchdata(settings.apiUrl, settings.query)
         const everyCountry = [...new Set(geoJson.features.map(feature =>
             feature.properties.country
         ))]
+        console.log(geoJson.features)
+        const everyWeaponcategory = [...new Set(geoJson.features.map(feature =>
+            feature.properties.weapontype[0].category
+        ))]
         const featureArray = []
         everyCountry.map(country => {
-            // Create new new objects for feature and weapons
-            let weaponObj = new Object()
             let featureObj = new Object()
-
+            // let weaponObj = new Object()
+            let weaponArray = []
+            everyWeaponcategory.forEach((category) => {
+                weaponArray.push({categoryname: category, amount: 0, weaponnames: []})
+            })
             geoJson.features.map(data => {
                 if(data.properties.country === country) {
-                    // TODO shorthand schrijven
-                    if (weaponObj[data.properties.weapontype] != null) {
-                        weaponObj[data.properties.weapontype] += 1
+                    const index = weaponArray.findIndex((weapon) => {
+                        return weapon.categoryname == data.properties.weapontype[0].category
+                    })
+                    weaponArray[index].amount += 1
+                    if(weaponArray[index].weaponnames.length == 0) {
+                        data.properties.weapontype[1].amount = 1
+                        weaponArray[index].weaponnames.push(data.properties.weapontype[1])
                     } else {
-                        weaponObj[data.properties.weapontype] = 1
+                        const foundindex = weaponArray[index].weaponnames.findIndex((weaponname) => {
+                            return weaponname.weaponname == data.properties.weapontype[1].weaponname
+                        })
+                        if(foundindex == -1) {
+                            data.properties.weapontype[1].amount = 1
+                            weaponArray[index].weaponnames.push(data.properties.weapontype[1])
+                        } else {
+                            weaponArray[index].weaponnames[foundindex].amount += 1
+                        }
                     }
-
                     if(featureObj.country) {
                         featureObj.amount += 1
                     } else {
@@ -71,10 +88,10 @@ fetchdata(settings.apiUrl, settings.query)
             })
             featureArray.push(bundledObj = {
                 featureObj: featureObj,
-                weaponObj: weaponObj
+                weaponObj: weaponArray
             })
         })
-        writeData(featureArray)
+        // writeData(featureArray)
     })
 
 function processData(data) {
@@ -89,7 +106,7 @@ function convertToFeatureObject(item) {
         properties: {
             // Add extra properties to the feature here i.e. Popups
             country: item.landName.value,
-            weapontype: filterWeaponTypes(item)
+            weapontype: filterWeaponTypes(item),
         },
         geometry: {
             type: 'Point',
@@ -104,6 +121,7 @@ function convertToFeatureObject(item) {
 
 function filterWeaponTypes(item) {
     let string = item.wapenType.value.toLowerCase().trim()
+    let string2 = item.wapenType.value.toLowerCase().trim()
 
     string.includes('bundel')
     || string.includes('model')
@@ -154,7 +172,18 @@ function filterWeaponTypes(item) {
     ||    string.includes('wapen')
     ||    string.includes('revolver')? string = 'vuurwapens' :  ''
 
-    return string
+    string2.includes('pijl') ? string2 = 'pijl' : ''
+    string2.includes('koker') ? string2 = 'koker' : ''
+    string2.includes('boog') ? string2 = 'boog' : ''
+    string2.includes('speer') ? string2 = 'speer' : ''
+    string2.includes('lans') ? string2 = 'lans' : ''
+    string2.includes('bijl') ? string2 = 'bijl' : ''
+    string2.includes('kanon') ? string2 = 'kanon' : ''
+    string2.includes('kostuum') ? string2 = 'unidentified' : ''
+    string2.includes('tempel') ? string2 = 'unidentified' : ''
+    string2.includes('pistool') ? string2 = 'pistool' : ''
+    string2.includes('geweer') ? string2 = 'geweer' : ''
+    return [{category: string, amount: 0}, {weaponname: string2, amount: 0}]
 }
 
 function pushFeatures(item) {

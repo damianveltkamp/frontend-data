@@ -1,6 +1,7 @@
 const d3 = require('d3')
 const mapboxgl = require('mapbox-gl')
 import {getFeatures} from "./fetchfeatures";
+import {normalize} from "./utilities/helpers"
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiZGFtaWFudmVsdGthbXAiLCJhIjoiY2szNGdvcTA1MG0zYzNibnlyNW1nZWZreSJ9.fUYUVFTp1_PjhZ6HkC0SDQ'
 const mapBox = new mapboxgl.Map({
@@ -11,6 +12,13 @@ const mapBox = new mapboxgl.Map({
 })
 mapBox.dragRotate.disable();
 mapBox.touchZoomRotate.disableRotation();
+
+const pieSettings = {
+    margin: 0,
+    width: 350,
+    height: 350,
+    radius: Math.min(350, 350) / 2 - 0
+}
 
 buildMap(mapBox)
 function buildMap(mapBox) {
@@ -87,6 +95,7 @@ function renderD3(projection,path,svg,map,data) {
                     .attr('class', 'country-tooltip')
                 constructTooltipHeader(item,div)
                 constructTooltipParagraph(item,div)
+                resetPie(item,div)
                 constructWeaponChart(item,div)
                 constructWeaponList(item,div)
                 setTimeout(function(){ div.classed('loaded',true) }, 100);
@@ -140,56 +149,198 @@ function removeTooltip() {
 
 // TODO Refactor tooltip chart code
 function constructWeaponChart(item,div) {
-    const width = 350
-    const height = 350
-    const margin = 0
-    const radius = Math.min(width, height) / 2 - margin
-
-    // Add svg to the tooltip div
     const piechartSvg = div
         .append('svg')
         .attr('class', 'pie-svg')
-        .attr('width', width)
-        .attr('height', height)
+        .attr('width', pieSettings.width)
+        .attr('height', pieSettings.height)
         .append('g')
-        .attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')');
+        .attr('transform', 'translate(' + pieSettings.width / 2 + ',' + pieSettings.height / 2 + ')');
 
     const pie = d3.pie()
-        .value(function(d) {return d.value; })
+        .value(function(d) { return d.value.amount; })
     const data_ready = pie(d3.entries(item.weaponObj))
-
     const arcGenerator = d3.arc()
         .innerRadius(0)
-        .outerRadius(radius)
+        .outerRadius(pieSettings.radius)
 
     piechartSvg
-        .selectAll('slices')
+        .selectAll('path')
         .data(data_ready)
         .enter()
         .append('path')
         .attr('d', arcGenerator)
         .attr('fill', function(d){
-            return d.data.key == 'unknown' ? '#FF757B' :
-            d.data.key == 'vuurwapens' ? '#499DCC' :
-            d.data.key == 'spangeschut' ? '#B33037' :
-            d.data.key == 'werpwapen' ? '#FFFC8F' : console.log('Cultural object has not been placed in a category', d.data)
+            return d.data.value.categoryname == 'unknown' ? '#FF757B' :
+            d.data.value.categoryname == 'vuurwapens' ? '#499DCC' :
+            d.data.value.categoryname == 'spangeschut' ? '#B33037' :
+            d.data.value.categoryname == 'werpwapen' ? '#FFFC8F' : console.log('Cultural object has not been placed in a category', d.data)
+        })
+        .attr('stroke', '#fff')
+        .style('stroke-width', '2px')
+        .on('click', updatePie)
+
+    piechartSvg
+        .selectAll('text')
+        .data(data_ready)
+        .enter()
+        .append('text')
+        .text(function(d){
+            return (d.data.value.amount != 0) ? d.data.value.categoryname : console.log('no value found' , d)
+        })
+        .attr('transform', function(d) { return 'translate(' + arcGenerator.centroid(d) + ')';  })
+        .style('text-anchor', 'middle')
+        .style('font-size', 17)
+        .style('fill', '#fff')
+        .on('click', updatePie)
+    return div
+}
+
+function resetPie(item,div) {
+    div
+        .append('button')
+        .text('reset pie')
+        .classed('pie-reset', true)
+    const button = document.querySelector('.pie-reset')
+    button.addEventListener('click', () => {
+        const piechartSvg = d3.select('g')
+        const pie = d3.pie()
+            .value(function(d) { return d.value.amount })
+        const data_ready = pie(d3.entries(item.weaponObj))
+        const arcGenerator = d3.arc()
+            .innerRadius(0)
+            .outerRadius(pieSettings.radius)
+
+        piechartSvg
+            .selectAll('path')
+            .data(data_ready)
+            .attr('d', arcGenerator)
+            .attr('fill', function(d){
+                return d.data.value.categoryname == 'unknown' ? '#FF757B' :
+                    d.data.value.categoryname == 'vuurwapens' ? '#499DCC' :
+                        d.data.value.categoryname == 'spangeschut' ? '#B33037' :
+                            d.data.value.categoryname == 'werpwapen' ? '#FFFC8F' : console.log('Cultural object has not been placed in a category', d.data)
+            })
+            .enter()
+            .append('path')
+            .attr('d', arcGenerator)
+            .attr('fill', function(d){
+                return d.data.value.categoryname == 'unknown' ? '#FF757B' :
+                    d.data.value.categoryname == 'vuurwapens' ? '#499DCC' :
+                        d.data.value.categoryname == 'spangeschut' ? '#B33037' :
+                            d.data.value.categoryname == 'werpwapen' ? '#FFFC8F' : console.log('Cultural object has not been placed in a category', d.data)
+            })
+            .attr('stroke', '#fff')
+            .style('stroke-width', '2px')
+
+        piechartSvg
+            .selectAll('path')
+            .data(data_ready)
+            .exit()
+            .remove()
+
+        piechartSvg
+            .selectAll('text')
+            .data(data_ready)
+            .text(function(d){
+                return d.data.value.categoryname
+            })
+            .attr('transform', function(d) { return 'translate(' + arcGenerator.centroid(d) + ')';  })
+            .enter()
+            .append('text')
+            .text(function(d){
+                return d.data.value.categoryname
+            })
+            .attr('transform', function(d) { return 'translate(' + arcGenerator.centroid(d) + ')';  })
+            .style('text-anchor', 'middle')
+            .style('fill', '#fff')
+            .style('font-size', 17)
+
+        piechartSvg
+            .selectAll('text')
+            .data(data_ready)
+            .exit()
+            .remove()
+    })
+    return div
+}
+function updatePie(item) {
+    const piechartSvg = d3.select('g')
+    const pie = d3.pie()
+        .value(function(d) { return d.value.amount })
+    const data_ready = pie(d3.entries(item.data.value.weaponnames))
+    const arcGenerator = d3.arc()
+        .innerRadius(0)
+        .outerRadius(pieSettings.radius)
+    const max = item.data.value.weaponnames.reduce(function(current, previous) {
+        return {amount: Math.max(current.amount, previous.amount)}
+    })
+    const min = item.data.value.weaponnames.reduce(function(current, previous) {
+        return {amount: Math.min(current.amount, previous.amount)}
+    })
+    console.log(item)
+    piechartSvg
+        .selectAll('path')
+        .data(data_ready)
+        .attr('d', arcGenerator)
+        .attr('fill', function(d){
+            if(item.data.value.categoryname == 'vuurwapens' && !(min.amount == max.amount)) {
+                return `rgba(73,157,204,${normalize(d.data.value.amount, min.amount,max.amount)})`
+            } else if(item.data.value.categoryname == 'vuurwapens' && (min.amount == max.amount)) {
+                return `rgb(73,157,204)`
+            } else if(item.data.value.categoryname == 'spangeschut' && !(min.amount == max.amount)){
+                console.log('heeeeeeey 1 ', min.amount, max)
+                return `rgba(179,48,55,${normalize(d.data.value.amount, min.amount,max.amount)})`
+             } else if (item.data.value.categoryname == 'spangeschut' && (min.amount == max.amount)) {
+                return `rgb(179,48,55)`
+            }
+        })
+        .enter()
+        .append('path')
+        .attr('d', arcGenerator)
+        .attr('fill', function(d){
+            if(item.data.value.categoryname == 'vuurwapens' && !(min.amount == max.amount)) {
+                return `rgba(73,157,204,${normalize(d.data.value.amount, min.amount,max.amount)})`
+            } else if(item.data.value.categoryname == 'vuurwapens' && (min.amount == max.amount)) {
+                return `rgb(73,157,204)`
+            } else if(item.data.value.categoryname == 'spangeschut' && !(min.amount == max.amount)){
+                console.log('heeeeeeey 2')
+                return `rgba(179,48,55,${normalize(d.data.value.amount, min.amount,max.amount)})`
+            } else if (item.data.value.categoryname == 'spangeschut' && (min.amount == max.amount)) {
+                return `rgb(179,48,55)`
+            }
         })
         .attr('stroke', '#fff')
         .style('stroke-width', '2px')
 
     piechartSvg
-        .selectAll('slices')
+        .selectAll('path')
         .data(data_ready)
+        .exit()
+        .remove()
+
+    piechartSvg
+        .selectAll('text')
+        .data(data_ready)
+        .text(function(d){
+            return d.data.value.weaponname
+        })
+        .attr('transform', function(d) { return 'translate(' + arcGenerator.centroid(d) + ')';  })
         .enter()
         .append('text')
         .text(function(d){
-            return d.data.key
+            return d.data.value.weaponname
         })
         .attr('transform', function(d) { return 'translate(' + arcGenerator.centroid(d) + ')';  })
         .style('text-anchor', 'middle')
+        .style('fill', '#fff')
         .style('font-size', 17)
 
-    return div
+    piechartSvg
+        .selectAll('text')
+        .data(data_ready)
+        .exit()
+        .remove()
 }
 
 function constructTooltipHeader(item,div) {
@@ -200,11 +351,11 @@ function constructTooltipHeader(item,div) {
 }
 
 function constructWeaponList(item,div) {
-    const entries = Object.entries(item.weaponObj)
     const ul = div.append('ul')
-    entries.map(weapon => {
+    item.weaponObj.map(weapon => {
+        console.log(weapon)
         // TODO List bouwen met wapen type en aantal
-        ul.append('li').text(weapon[0] + ' ' + weapon[1])
+        ul.append('li').text('Aantal gevonden ' + weapon.categoryname + ' wapens ' + weapon.amount)
     })
     return div
 }
