@@ -28,7 +28,7 @@
     "d3-geo-projection": "^2.7.1",
     "d3-scale": "^3.2.0",
     "mapbox-gl": "^1.5.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^3.1.1",
     "topojson": "^3.0.2"
   }
 }
